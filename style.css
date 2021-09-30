@@ -1,0 +1,592 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400&display=swap');
+:root{
+    --crimson: #DC143C;
+}
+
+*{
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+*::selection{
+    background:var(--crimson);
+    color:black;
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+html::-webkit-scrollbar{
+    width: 1.4rem;
+}
+html::-webkit-scrollbar-track{
+    background:#222;
+}
+html::-webkit-scrollbar-thumb{
+    background:var(--crimson);
+}
+body{
+    background: black;
+    overflow-x: hidden;
+    padding-left: 35rem;
+}
+header{
+    position: fixed;
+    top:0; left:0;
+    z-index: 1000;
+    height:100%;
+    width:35rem;
+    background: #1a1a1a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    text-align: center;
+}
+header .user img{
+    height: 17rem;
+    width: 17rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border:.7rem solid var(--crimson);
+}
+header .user .name{
+    font-size: 3.5rem;
+    background: linear-gradient( to right, #ccc 50%,#FF5858 50%, #CC2e5d);
+    background-size: 200%;
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent;
+    transition: 0.5s ease-out;
+}
+header .user .name:hover{
+    background-position: -100%;
+}
+header .user .post{
+    font-size: 2rem;
+    color: #eee;
+}
+header .navbar{
+    width: 100%;
+}
+header .navbar ul{
+    list-style: none;
+    padding: 1rem 3rem;
+}
+header .navbar ul li a{
+    display: block;
+    padding: 1rem;
+    margin: 1.5rem 0;
+    background: #333;
+    color:#eee;
+    font-size: 2rem;
+    border-radius: 5rem;
+    transition: 0.5s linear;
+}
+header .navbar ul li a:hover{
+    background:var(--crimson);
+}
+ #menu{
+     position: fixed;
+     top:2rem; right:2rem;
+     background:#333;
+     color:#fff;
+     cursor:pointer;
+     font-size: 2.5rem;
+     padding: 1rem 1.5rem;
+     z-index:1000%;
+     
+ }
+
+@media (max-width:1200px){
+    html{
+        font-size: 55%;
+    }
+    .home{
+        padding:1rem 4rem;
+    }
+}
+
+@media (max-width:991px){
+    header{
+        left:-120%;
+    }
+    #menu{
+        display: block;
+    }
+    body{
+        padding: 0;
+    }
+}
+header.toggle{
+    left:0%;
+}
+
+@media (max-width:768px){
+    html{
+        font-size: 50%;
+    } 
+    }
+
+@media (max-width:400px){
+    header{
+        width: 100vw;
+    }
+}
+
+
+.home{
+    display: flex;
+    justify-content:  center;
+    flex-flow:column;
+    padding:0 15rem;
+}
+
+.home h3{
+    font-size: 2.5rem;
+    color:#fff;
+}
+.home h1{
+    font-size: 5vw;
+    color:#fff;
+}
+.home h1 span{
+    color:var(--crimson);
+}
+.home h3:hover span{
+    color: #fff;
+    text-shadow: 0 0 10px white,
+                 0 0 20px white,
+                 0 0 40px white,
+                 0 0 80px white,
+                 0 0 120px white;
+}
+
+section{
+    min-height: 100vh;
+    padding:1rem;
+}
+.home p{
+    font-size: 2.0rem;
+    color:#eee;
+    padding:1rem 0;
+}
+.btn{
+    padding:.7rem 3rem;
+    background: #333;
+    color:#fff;
+    cursor: pointer;
+    margin-top: 1rem;
+    font-size: 2rem;
+    border-radius: 2rem;
+  
+}
+.btn i{
+    padding:0 .5rem;
+    font-size: 1.8rem;
+}
+.btn:hover{
+    background:var(--crimson);
+}
+.heading{
+    text-align: center;
+    margin: 0 6rem;
+    font-size: 4rem;
+    padding:1rem;
+    border-bottom: .1rem solid #fff4;
+    color:#fff;
+}
+.about p{
+    font-size: 2.0rem;
+    color:#eee;
+    padding:1rem 0;
+    text-align: center;
+    margin-top: 1rem;
+}
+.about h1 span{
+    color: var(--crimson);
+}
+.about p span{
+    color: var(--crimson);
+}
+.about p:hover span{
+    color: var(--crimson);
+    text-shadow: 0 0 10px var(--crimson),
+                 0 0 20px var(--crimson),
+                 0 0 40px var(--crimson),
+                 0 0 80px var(--crimson),
+                 0 0 120px var(--crimson);
+}
+.about .row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 1rem 0;
+}
+.about .row .info{
+    flex:1 1 48rem;
+    padding: 2rem 1rem;
+    padding-left: 6rem;
+}
+.about .row .info h3{
+    font-size: 2rem;
+    padding:1 rem 0;
+    font-weight: normal;
+    color: #fff;
+}
+.about .row .info h3 span{
+    color: var(--crimson);
+}
+.eduicons{
+    display:inline-block;
+    align-items: center;
+    padding: 1rem;
+   margin-right: 2rem;
+    margin-left: 3rem;
+    text-align: center;
+    font-size: 10px;
+    flex-wrap: wrap;
+}
+#school img{
+    height: 400px;
+    width: 500px;
+    max-width: 100%;
+}
+#college img{
+    height: 400px;
+    width: 500px;
+    max-width: 100%;
+}
+.eduicons h2{
+    font-weight: bold;
+    color: #fff;
+    margin-top: 1rem;
+}
+.shead{
+    text-align: center;
+    margin: 0rem 6rem;
+    font-size: 4rem;
+    padding:1rem;
+    border-bottom: .1rem solid #fff4;
+    color:#fff;
+}
+.shead span{
+    color: var(--crimson);
+}
+.skills p{
+    font-size: 2.0rem;
+    color:#eee;
+    padding:1rem 0;
+    text-align: center;
+    margin-top: 1rem;
+}
+.skills p span{
+    color: var(--crimson);
+}
+.skills p:hover span{
+    color: var(--crimson);
+    text-shadow: 0 0 10px var(--crimson),
+                 0 0 20px var(--crimson),
+                 0 0 40px var(--crimson),
+                 0 0 80px var(--crimson),
+                 0 0 120px var(--crimson);
+}
+.skicons1{
+    display:inline-block;
+    align-items: center;
+    padding: 1rem;
+   margin-right: 2rem;
+    margin-left: 3rem;
+    text-align: center;
+    font-size: 10px;
+    flex-wrap: wrap;
+}
+#H5 img{
+width: 300px;
+height: 300px;
+max-width: 100%;
+}
+#c3 img{
+width: 300px;
+height: 300px;
+max-width: 100%;
+}
+#jst img{
+width: 300px;
+height: 300px;
+max-width: 100%;
+}
+.skicons1 h2{
+    font-weight: bold;
+    color: #fff;
+    margin-top: 1rem;
+}
+.skicons1 h2:hover{
+    color: #fff;
+    text-shadow: 0 0 10px white,
+                 0 0 20px white,
+                 0 0 40px white,
+                 0 0 80px white,
+                 0 0 120px white;
+}
+.skicons2{
+    display:inline-block;
+    align-items: center;
+    padding: 1rem;
+   margin-right: 2rem;
+    margin-left: 3rem;
+    text-align: center;
+    font-size: 10px;
+    flex-wrap: wrap;
+}
+#btsrp img{
+    width: 300px;
+    height: 300px;
+    max-width: 100%;
+    }
+    #cp img{
+    width: 300px;
+    height: 300px;
+    max-width: 100%;
+    }
+    #cpp img{
+    width: 300px;
+    height: 300px;
+    max-width: 100%;
+    }
+    .skicons2 h2:hover{
+        color: #fff;
+        text-shadow: 0 0 10px white,
+                     0 0 20px white,
+                     0 0 40px white,
+                     0 0 80px white,
+                     0 0 120px white;
+    }
+    .skicons2 h2{
+        font-weight: bold;
+        color: #fff;
+        margin-top: 1rem;
+    }
+    .prohead{
+        text-align: center;
+        margin: 0 6rem;
+        font-size: 4rem;
+        padding:1rem;
+        border-bottom: .1rem solid #fff4;
+        color:#fff;
+    }
+    .prohead span{
+        color: var(--crimson);
+    }
+    .projects p{
+        font-size: 2.0rem;
+        color:#eee;
+        padding:1rem 0;
+        text-align: center;
+        margin-top: 1rem;
+    }
+    #FG h1{
+        text-align: left;
+        font-size: 4rem;
+        padding:1rem;
+        color:#fff;
+        cursor: pointer;
+    }
+    #FG p{
+        text-align: left;
+        font-size: 2.0rem;
+        color:#eee;
+        padding:1rem 0;
+        margin-top: 1rem;
+    }
+    #FG h1:hover{
+        color: #fff;
+        text-shadow: 0 0 10px white,
+                     0 0 20px white,
+                     0 0 40px white,
+                     0 0 80px white,
+                     0 0 120px white;
+    }
+    #RR h1{
+        text-align: left;
+        font-size: 4rem;
+        padding:1rem;
+        color:#fff;
+        cursor: pointer;
+    }
+    #RR p{
+        text-align: left;
+        font-size: 2.0rem;
+        color:#eee;
+        padding:1rem 0;
+        margin-top: 1rem;
+    }
+    #RR h1:hover{
+        color: #fff;
+        text-shadow: 0 0 10px white,
+                     0 0 20px white,
+                     0 0 40px white,
+                     0 0 80px white,
+                     0 0 120px white;
+    }
+    #BC h1{
+        text-align: left;
+        font-size: 4rem;
+        padding:1rem;
+        color:#fff;
+        cursor: pointer;
+    }
+    #BC p{
+        text-align: left;
+        font-size: 2.0rem;
+        color:#eee;
+        padding:1rem 0;
+        margin-top: 1rem;
+    }
+    #BC h1:hover{
+        color: #fff;
+        text-shadow: 0 0 10px white,
+                     0 0 20px white,
+                     0 0 40px white,
+                     0 0 80px white,
+                     0 0 120px white;
+    }
+    .comsoon{
+        font-size: 2.0rem;
+        color:#eee;
+        padding:1rem 0;
+        text-align: center;
+        margin-top: 2rem;
+        margin-bottom: 8rem;
+    }
+    .comsoon:hover span{
+        color: #fff;
+        text-shadow: 0 0 10px white,
+                     0 0 20px white,
+                     0 0 40px white,
+                     0 0 80px white,
+                     0 0 120px white;
+    }
+    .comsoon h2 span{
+        color: var(--crimson);
+    }
+    .reshead{
+        text-align: center;
+        margin: 0rem 6rem;
+        font-size: 4rem;
+        padding:1rem;
+        border-bottom: .1rem solid #fff4;
+        color:#fff;
+    }
+    .reshead span{
+        color: var(--crimson);
+    }
+    .resume p{
+        font-size: 2.0rem;
+        color:#eee;
+        padding:1rem 0;
+        text-align: center;
+        margin-top: 1rem;
+    }
+   .contact .conrow{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+   }
+   .contact .conrow .conrent{
+       flex:1 1 45rem;
+       padding: 4rem;
+       padding-bottom: 0;
+   }
+   .contact .conrow form{
+       flex:1 1 45rem;
+       padding: 2rem;
+       margin:2rem;
+       margin-bottom: 4rem;
+   }
+   .conhead{
+    text-align: center;
+    margin: 0rem 6rem;
+    font-size: 4rem;
+    padding:1rem;
+    border-bottom: .1rem solid #fff4;
+    color:#fff;
+}
+.conhead span{
+    color: var(--crimson);
+}
+.contact .conrow form .box{
+    padding:1.5rem;
+    margin:1rem 0;
+    background: #3333;
+    color:#fff;
+    text-transform:none;
+    font-size: 1.7rem;
+    width:100%
+}
+.contact .conrow .conrent .message{
+    height: 15rem;
+    resize: none;
+}
+.contact .conrow .conrent .cotitle{
+    text-transform: uppercase;
+    color:#fff;
+    font-size: 3rem;
+    padding-bottom: 2rem;
+}
+.contact .conrow .conrent .coninfo h3{
+display: flex;
+align-items: center;
+font-size: 2rem;
+color:#eee;
+padding:1rem 0;
+font-weight: normal;
+}
+.contact .conrow .conrent .coninfo h3 i{
+padding-right: 1rem;
+color: var(--crimson);
+}
+.contact form button{
+    padding:.7rem 3rem;
+    background: #333;
+    color:#fff;
+    cursor: pointer;
+    margin-top: 1rem;
+    font-size: 2rem;
+    border-radius: 2rem;
+}
+.contact form button i{
+    padding:0 .5rem;
+    font-size: 1.8rem;
+}
+.contact form button:hover{
+    color: var(--crimson);
+}
+.cotitle:hover span{
+    color: #fff;
+    text-shadow: 0 0 10px white,
+                 0 0 20px white,
+                 0 0 40px white,
+                 0 0 80px white,
+                 0 0 120px white;
+}
+.coninfo:hover span{
+    color: #fff;
+    text-shadow: 0 0 10px white,
+                 0 0 20px white,
+                 0 0 40px white,
+                 0 0 80px white,
+                 0 0 120px white;
+}
+.contact .conrow form{
+    margin:3rem 0;
+}
